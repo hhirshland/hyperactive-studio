@@ -1,26 +1,227 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Structured Experimentation — Product Lab Palette */
+  --background: #FAFAFA;
+  --foreground: #141414;
+  --primary: #141414;
+  --primary-light: #2A2A2A;
+
+  /* ── Brand Colors ─────────────────────────────── */
+
+  /* Teal — confidence, progress, intelligence
+     Use for: CTAs, active states, success indicators, links */
+  --teal: #0D9373;
+  --teal-light: #10B890;
+  --teal-dark: #0A7A5F;
+  --teal-muted: rgba(13, 147, 115, 0.08);
+
+  /* Blue — trust, technology, depth
+     Use for: Secondary actions, info states, data visuals, highlights */
+  --blue: #2563EB;
+  --blue-light: #3B82F6;
+  --blue-dark: #1D4ED8;
+  --blue-muted: rgba(37, 99, 235, 0.08);
+
+  /* Orange — energy, speed, warmth
+     Use for: Emphasis, alerts, key moments, playful accents */
+  --orange: #F06D2D;
+  --orange-light: #F5874F;
+  --orange-dark: #D45A1F;
+  --orange-muted: rgba(240, 109, 45, 0.08);
+
+  /* ── Legacy aliases (mapped to new palette) ──── */
+  --secondary: var(--teal);
+  --secondary-light: var(--teal-light);
+  --secondary-muted: var(--teal-muted);
+  --accent: var(--orange);
+  --accent-light: var(--orange-light);
+  --accent-muted: var(--orange-muted);
+
+  /* Neutrals */
+  --surface: #FFFFFF;
+  --surface-alt: #F3F3F3;
+  --muted: #71717A;
+  --muted-light: #A1A1AA;
+  --border: #E4E4E7;
+  --border-strong: #D4D4D8;
+  --grid-line: rgba(0, 0, 0, 0.04);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  /* Brand colors — Teal */
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-muted: var(--teal-muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand colors — Blue */
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-blue-dark: var(--blue-dark);
+  --color-blue-muted: var(--blue-muted);
+
+  /* Brand colors — Orange */
+  --color-orange: var(--orange);
+  --color-orange-light: var(--orange-light);
+  --color-orange-dark: var(--orange-dark);
+  --color-orange-muted: var(--orange-muted);
+
+  /* Legacy aliases */
+  --color-secondary: var(--teal);
+  --color-secondary-light: var(--teal-light);
+  --color-secondary-muted: var(--teal-muted);
+  --color-accent: var(--orange);
+  --color-accent-light: var(--orange-light);
+  --color-accent-muted: var(--orange-muted);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-grid-line: var(--grid-line);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(10, 143, 108, 0.15);
+  color: var(--foreground);
+}
+
+/* ---- Lab Grid Background ---- */
+.grid-bg {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.grid-bg-dense {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ---- Annotation / Handwritten cues ---- */
+.annotation {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--muted-light);
+  text-transform: uppercase;
+}
+
+.annotation-teal {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--teal);
+}
+
+.annotation-blue {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--blue);
+}
+
+.annotation-orange {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--orange);
+}
+
+/* Legacy alias */
+.annotation-accent {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--orange);
+}
+
+/* ---- Label / Tag style (product-tool feel) ---- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.tag-teal {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: var(--teal-muted);
+}
+
+.tag-blue {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-muted);
+}
+
+.tag-orange {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: var(--orange-muted);
+}
+
+/* Legacy aliases */
+.tag-active { border-color: var(--teal); color: var(--teal); background: var(--teal-muted); }
+.tag-warning { border-color: var(--orange); color: var(--orange); background: var(--orange-muted); }
+
+/* ---- Hand-drawn annotation underline ---- */
+.hand-note {
+  position: relative;
+  display: inline;
+}
+.hand-note::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: -4px;
+  right: -4px;
+  height: 35%;
+  background: var(--blue);
+  opacity: 0.13;
+  border-radius: 3px 4px 2px 5px;
+  transform: rotate(-0.7deg) skewX(-2deg);
+}
+
+/* ---- Debug / Status indicator ---- */
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.status-dot.live { background: var(--secondary); }
+.status-dot.pending { background: var(--accent); }
+.status-dot.idle { background: var(--muted-light); }
