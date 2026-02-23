@@ -4,7 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 
 const clients = [
   { name: "Resolute Ventures", type: "Venture Fund" },
-  { name: "Selby Lane", type: "Venture Fund" },
+  { name: "Selby Lane", type: "Investment Firm" },
   { name: "Coursecast", type: "Golf Startup" },
 ];
 
