@@ -45,6 +45,12 @@ const services = [
     description: "End-to-end product design—research, UX, UI, and systems.",
     status: "pending" as const,
   },
+  {
+    id: "08",
+    title: "GTM Engine",
+    description: "AI-driven workflow for creating content and driving distribution.",
+    status: "pending" as const,
+  },
 ];
 
 export default function Services() {
