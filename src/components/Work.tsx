@@ -23,6 +23,7 @@ const projects = [
     description: "A habit-building app designed to help users create and maintain positive daily routines.",
     iteration: "v1.0",
     status: "shipped",
+    link: "https://thrive.hyperactivestudio.xyz",
   },
   {
     title: "40 Ball",
