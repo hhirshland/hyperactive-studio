@@ -5,7 +5,7 @@ import AnimatedSection from "./AnimatedSection";
 const clients = [
   { name: "Resolute Ventures", type: "Venture Fund" },
   { name: "Selby Lane", type: "Venture Fund" },
-  { name: "Coursecast", type: "EdTech" },
+  { name: "Coursecast", type: "Golf Startup" },
 ];
 
 export default function Clients() {

@@ -17,7 +17,7 @@ const services = [
   },
   {
     id: "03",
-    title: "Mobile Apps",
+    title: "Mobile App development",
     description: "Native and cross-platform mobile apps that users actually love to open.",
     status: "live" as const,
   },
@@ -56,7 +56,7 @@ export default function Services() {
             <div>
               <span className="annotation">Services</span>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                What we build
+                What we do
               </h2>
             </div>
             <span className="tag">

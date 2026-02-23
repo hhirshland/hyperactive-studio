@@ -23,7 +23,7 @@ export default function Hero() {
           >
             <span className="tag tag-active">
               <span className="status-dot live" />
-              accepting projects
+              accepting clients
             </span>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center rounded-md bg-foreground px-6 py-3 text-[13px] font-medium text-white transition-all duration-150 hover:bg-primary-light"
             >
-              Start a project
+              Work with us
               <svg
                 className="ml-2 h-3.5 w-3.5"
                 fill="none"

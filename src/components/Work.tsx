@@ -75,7 +75,7 @@ export default function Work() {
                 What we&apos;ve shipped
               </h2>
               <p className="mt-3 text-base text-muted max-w-md">
-                A selection of products we&apos;ve taken from concept to live.
+                A selection of products we&apos;ve taken from concept to launch.
               </p>
             </div>
             <span className="annotation-accent">
