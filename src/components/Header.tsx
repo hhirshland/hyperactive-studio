@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -34,9 +35,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 lg:px-8">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="relative flex h-7 w-7 items-center justify-center rounded-[5px] bg-foreground transition-transform duration-150 group-hover:scale-105">
-            <span className="text-[11px] font-bold text-white tracking-tight">H</span>
-          </div>
+          <Image
+            src="/hyperactive-logo.png"
+            alt="Hyperactive Studio"
+            width={36}
+            height={36}
+            className="transition-transform duration-150 group-hover:scale-105"
+          />
           <span className="text-[15px] font-semibold tracking-tight text-foreground">
             hyperactive
           </span>
