@@ -72,7 +72,7 @@ export default function Work() {
         <AnimatedSection>
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>
-              <span className="annotation">Case Studies</span>
+              <span className="annotation">Our Products</span>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 What we&apos;ve shipped
               </h2>

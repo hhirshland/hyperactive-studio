@@ -6,23 +6,23 @@ import AnimatedSection from "./AnimatedSection";
 const differentiators = [
   {
     id: "01",
-    title: "Startup-trained",
-    description: "6+ years shipping in high-pressure environments. We know what matters and what doesn't.",
-  },
-  {
-    id: "02",
-    title: "Ruthless prioritization",
-    description: "Focus on leverage and driving outcomes. Unlock velocity by prioritizing what matters most.",
-  },
-  {
-    id: "03",
     title: "AI-native",
     description: "Not experimenting with AI—operating at the edge. Woven into how we design, build, and ship.",
   },
   {
-    id: "04",
+    id: "02",
     title: "End-to-end",
     description: "Strategy, design, engineering, analytics, growth. One team, zero hand-offs.",
+  },
+  {
+    id: "03",
+    title: "Outcome-driven",
+    description: "You don't get decks and wireframes. You get shipped products that work.",
+  },
+  {
+    id: "04",
+    title: "Ruthless prioritization",
+    description: "Focus on leverage and driving outcomes. Unlock velocity by prioritizing what matters most.",
   },
   {
     id: "05",
@@ -31,8 +31,8 @@ const differentiators = [
   },
   {
     id: "06",
-    title: "Outcome-driven",
-    description: "You don't get decks and wireframes. You get shipped products that work.",
+    title: "Startup-trained",
+    description: "6+ years shipping in high-pressure environments. We know what matters and what doesn't.",
   },
 ];
 
@@ -51,25 +51,25 @@ export default function About() {
                 <span className="text-muted">Curious about methods.</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted">
-                Great digital products aren&apos;t rare because they&apos;re
-                impossible. They&apos;re rare because teams don&apos;t know where
-                to start, what to prioritize, or how to ship fast without cutting
-                quality.
+                We&apos;re results-driven — every engagement starts with
+                understanding where your team is today and intimately learning the
+                problems you&apos;re facing. No assumptions, no generic playbooks.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted">
-                Hyperactive closes that gap. We&apos;re a boutique, AI-native
-                product studio that helps ambitious teams bring ideas to
-                life—end to end.
+                From there, we define what successful outcomes actually look like —
+                then use our deep domain knowledge and experience deploying AI
+                tools to drive those outcomes. Strategy without execution is
+                just a slide deck. We ship the real thing.
               </p>
 
               {/* Highlighted callout */}
               <motion.div
                 whileHover={{ x: 2 }}
                 transition={{ duration: 0.15 }}
-                className="mt-8 flex items-start gap-3 rounded-md border-l-2 border-accent bg-accent-muted px-4 py-3"
+                className="mt-8 flex items-start gap-3 rounded-md border-l-2 border-teal bg-teal-muted px-4 py-3"
               >
                 <svg
-                  className="h-4 w-4 text-accent mt-0.5 shrink-0"
+                  className="h-4 w-4 text-teal mt-0.5 shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

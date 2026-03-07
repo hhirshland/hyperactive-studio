@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden pt-14 grid-bg">
       {/* Corner annotation */}
-      <div className="absolute top-20 right-6 lg:right-12 annotation hidden sm:block">
-        v1.0 — 2026
+      <div className="absolute top-20 right-6 lg:right-12 font-mono text-[11px] text-muted-light hidden sm:block">
+        v1.1 — 2026
       </div>
 
       {/* Grid accent line - left */}
@@ -34,9 +34,9 @@ export default function Hero() {
             transition={{ duration: 0.4, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.08] tracking-tight text-foreground"
           >
-            We test, build, and ship
+            Transform your enterprise
             <br />
-            <span className="hand-note">digital products</span>
+            for the <span className="hand-note">AI Era</span>
           </motion.h1>
 
           {/* Subhead */}
@@ -46,9 +46,9 @@ export default function Hero() {
             transition={{ duration: 0.4, delay: 0.25 }}
             className="mt-6 max-w-lg text-[17px] leading-relaxed text-muted"
           >
-            Hyperactive is an AI-native product studio. We help ambitious teams
-            go from idea to shipped product—with strategy, engineering, and
-            ruthless prioritization.
+            Hyperactive is an AI agency that helps enterprises identify
+            high-impact AI opportunities, implement real workflows, and upskill
+            their teams.
           </motion.p>
 
           {/* CTAs */}
@@ -82,30 +82,50 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Bottom metrics strip */}
+        {/* Pillars */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.55 }}
-          className="mt-20 lg:mt-28 border-t border-border pt-6 lg:pl-6"
+          className="mt-20 lg:mt-28 border-t border-border pt-8 lg:pl-6"
         >
-          <div className="grid grid-cols-2 gap-y-6 gap-x-8 sm:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-3">
             {[
-              { value: "6+", label: "yrs shipping", mono: true },
-              { value: "End-to-end", label: "strategy → launch", mono: false },
-              { value: "AI-native", label: "every workflow", mono: false },
-              { value: "Weeks", label: "not quarters", mono: false },
-            ].map((stat, i) => (
-              <div key={i} className="flex flex-col">
-                <span
-                  className={`text-base font-semibold tracking-tight text-foreground ${
-                    stat.mono ? "font-mono" : ""
-                  }`}
-                >
-                  {stat.value}
-                </span>
-                <span className="annotation mt-1">{stat.label}</span>
-              </div>
+              {
+                title: "Strategic Thinkers",
+                description:
+                  "We don\u2019t just implement \u2014 we diagnose. Every engagement starts with understanding your business, your constraints, and where AI can create the most leverage.",
+              },
+              {
+                title: "Action Oriented",
+                description:
+                  "Strategies without execution are just slide decks. We move from insight to implementation in weeks, not quarters.",
+              },
+              {
+                title: "Results Driven",
+                description:
+                  "Every recommendation is tied to measurable outcomes. We optimize for impact, not activity.",
+              },
+            ].map((pillar, i) => (
+              <motion.div
+                key={pillar.title}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: 0.6 + i * 0.08 }}
+                className="group rounded-lg border border-border bg-surface p-5 transition-all duration-200 hover:border-border-strong hover:shadow-sm"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-md bg-teal-muted font-mono text-[10px] font-semibold text-teal">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-sm font-semibold text-foreground">
+                    {pillar.title}
+                  </h3>
+                </div>
+                <p className="text-[13px] leading-relaxed text-muted">
+                  {pillar.description}
+                </p>
+              </motion.div>
             ))}
           </div>
         </motion.div>

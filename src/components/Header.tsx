@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "How It Works", href: "/#process" },
+  { label: "Work", href: "/#work" },
+  { label: "About", href: "/#about" },
+  { label: "Products", href: "/products" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
@@ -34,7 +36,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 lg:px-8">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
+        <a href="/" className="flex items-center gap-2.5 group">
           <Image
             src="/hyperactive-logo.png"
             alt="Hyperactive Studio"
@@ -42,10 +44,12 @@ export default function Header() {
             height={36}
             className="transition-transform duration-150 group-hover:scale-105"
           />
-          <span className="text-[15px] font-semibold tracking-tight text-foreground">
-            hyperactive
+          <span className="flex items-baseline gap-1.5">
+            <span className="text-[15px] font-semibold tracking-tight text-foreground">
+              hyperactive
+            </span>
+            <span className="hidden sm:inline-block annotation opacity-50">studio</span>
           </span>
-          <span className="hidden sm:inline-block annotation ml-1 opacity-50">studio</span>
         </a>
 
         {/* Desktop Nav */}
@@ -61,7 +65,7 @@ export default function Header() {
           ))}
           <div className="ml-3 h-4 w-px bg-border" />
           <a
-            href="#contact"
+            href="/#contact"
             className="ml-3 rounded-md bg-foreground px-4 py-1.5 text-[13px] font-medium text-white transition-all duration-150 hover:bg-primary-light"
           >
             Get in touch
@@ -116,7 +120,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 rounded-md bg-foreground px-4 py-2 text-center text-[13px] font-medium text-white"
               >

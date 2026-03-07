@@ -15,21 +15,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hyperactive Studio — Modern Product Studio",
+  title: "Hyperactive Studio — AI Agency for Enterprise Transformation",
   description:
-    "Hyperactive Studio helps ambitious teams turn ideas into shipped, scalable digital products using modern design, engineering, and AI-native workflows.",
+    "Hyperactive Studio is an AI agency that helps enterprises identify high-impact AI opportunities, implement real workflows, and upskill their teams.",
   keywords: [
-    "product studio",
+    "AI agency",
+    "enterprise AI",
+    "AI readiness assessment",
+    "AI workflow implementation",
+    "AI consulting",
+    "AI upskilling",
     "web development",
-    "mobile app development",
-    "AI workflows",
-    "product strategy",
-    "digital products",
+    "app development",
   ],
   openGraph: {
-    title: "Hyperactive Studio — Modern Product Studio",
+    title: "Hyperactive Studio — AI Agency for Enterprise Transformation",
     description:
-      "We help ambitious teams turn ideas into shipped digital products.",
+      "We help enterprises identify high-impact AI opportunities, implement real workflows, and upskill their teams.",
     type: "website",
   },
 };

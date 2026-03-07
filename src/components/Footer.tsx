@@ -11,23 +11,31 @@ export default function Footer() {
             alt="Hyperactive Studio"
             width={32}
             height={32}
-            className=""
           />
-          <span className="text-sm font-semibold tracking-tight text-foreground">
-            hyperactive
+          <span className="flex items-baseline gap-1.5">
+            <span className="text-sm font-semibold tracking-tight text-foreground">
+              hyperactive
+            </span>
+            <span className="annotation opacity-40">studio</span>
           </span>
-          <span className="annotation ml-0.5 opacity-40">studio</span>
         </div>
 
         {/* Nav */}
         <nav className="flex gap-6">
-          {["Services", "Work", "About", "Contact"].map((item) => (
+          {[
+            { label: "Services", href: "/#services" },
+            { label: "How It Works", href: "/#process" },
+            { label: "Work", href: "/#work" },
+            { label: "About", href: "/#about" },
+            { label: "Products", href: "/products" },
+            { label: "Contact", href: "/#contact" },
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-[13px] text-muted transition-colors duration-150 hover:text-foreground"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </nav>

@@ -5,51 +5,45 @@ import AnimatedSection from "./AnimatedSection";
 const services = [
   {
     id: "01",
-    title: "Product Strategy",
-    description: "Ruthless prioritization. Find the highest-leverage path from idea to shipped product.",
+    title: "AI Readiness Assessment",
+    description:
+      "Evaluate your AI maturity and pinpoint the highest-leverage opportunities across your business.",
     status: "live" as const,
   },
   {
     id: "02",
-    title: "Web Development",
-    description: "Modern, performant websites and web apps. Built with the latest frameworks.",
+    title: "AI Workflow Implementation",
+    description:
+      "Build and deploy AI agents, automations, and workflows that create real value.",
     status: "live" as const,
   },
   {
     id: "03",
-    title: "Mobile App development",
-    description: "Native and cross-platform mobile apps that users actually love to open.",
+    title: "Web & App Development",
+    description:
+      "Modern websites, web apps, and native mobile apps built with the latest frameworks.",
     status: "live" as const,
   },
   {
     id: "04",
-    title: "AI Agents & Workflows",
-    description: "Practical AI implementation—agents, automations, and workflows that create real value.",
+    title: "AI Upskilling & Workshops",
+    description:
+      "Custom training programs, knowledge bases, and workshops to make your team AI-fluent.",
     status: "live" as const,
   },
   {
     id: "05",
     title: "Product Analytics",
-    description: "Instrument, measure, and understand what users actually do. Then decide better.",
+    description:
+      "Instrument, measure, and understand what users actually do to enable smarter product decisions.",
     status: "live" as const,
   },
   {
     id: "06",
     title: "Growth & Experimentation",
-    description: "A/B testing, experimentation frameworks, and growth strategy grounded in data.",
+    description:
+      "A/B testing, experimentation frameworks, and data-driven growth strategy.",
     status: "live" as const,
-  },
-  {
-    id: "07",
-    title: "Design",
-    description: "End-to-end product design—research, UX, UI, and systems.",
-    status: "pending" as const,
-  },
-  {
-    id: "08",
-    title: "GTM Engine",
-    description: "AI-driven workflow for creating content and driving distribution.",
-    status: "pending" as const,
   },
 ];
 
